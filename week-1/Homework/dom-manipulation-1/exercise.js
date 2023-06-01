@@ -15,7 +15,12 @@ Write JavaScript below that logs:
     --> should log a list of nodes with a length of 3
 
 */
+    const pElement = document.querySelectorAll('p')
+    const firstDivElement = document.querySelector('div')
+    const jumbotron = document.querySelector("#jumbotron-text")
 
+    const primaryContent = document.querySelectorAll('.primary-content')
+    const primaryParagraph = primaryContent.querySelectorAll('p') //ESTE ME DIO ERROR
 
 /*
 Task 2
