@@ -29,6 +29,13 @@ Task 2
 When a user clicks the 'ALERT' button, an alert box should pop up with the text "Thanks for visiting Bikes for Refugees!"
 */
 
+let alertButton = document.querySelector('#alertBtn') // me aparece como no definida
+
+alertButton.addEventListener("click", (e) => {
+    e.preventDefault()
+    alert("Thanks for visiting Bikes for Refugees!")
+});
+//NO ME APARECE EL POP UP
 
 /*
 Task 3
@@ -37,6 +44,12 @@ Task 3
 Write JavaScript below that changes the background colour of the page when the 'Change colour' button is clicked.
 */
 
+const colourButton = document.querySelector("#bgrChangeBtn");
+colourButton.addEventListener("click", (e) => {
+    e.preventDefault()
+    document.body.style.backgroundColor = "red"
+});
+//NO CAMBIA
 
 /*
 Task 4
@@ -44,7 +57,14 @@ Task 4
 
 When a user clicks the ‘Add some text’ button, a new paragraph should be added inside the section that says “LEARN MORE”
 */
+const addTextButton = document.querySelector("#addArticleBtn")
+const learnMoreSection = document.querySelector("#mainArticles")
 
+addTextButton.addEventListener("click", (e) => {
+    e.preventDefault()
+    let newParagraph = document.createElement("p")
+    learnMoreSection.appendChild(newParagraph)
+})
 
 
 /*
@@ -53,6 +73,15 @@ Task 5
 
 When the 'Larger links!' button is clicked, the text of all links on the page should increase.
 */
+const largerLinkBottom = document.querySelector('#largerLinksBtn')
+const aLink = document.querySelectorAll('a')
+
+largerLinkBottom.addEventListener("click", (e) => {
+    e.preventDefault()
+    aLink.forEach(link => {
+        link.style.fontSize = '20px';
+      });
+})
 
 
 /*
@@ -63,6 +92,15 @@ Using the same function in Task 4,
 When the 'Add' button is clicked, get the text inside the input field and create a new paragraph in the "LEARN MORE" section
 Also clear the text inside the input field
 */
+
+const addButton = document.querySelector("#addArticleBtn")
+const inputField = document.querySelector(".form-control")
+
+addButton.addEventListener("click", (e) => {
+    e.preventDefault()
+    let newParagraph = document.createElement("p")
+    learnMoreSection.appendChild(newParagraph)
+})
 
 /*
 Task 7
